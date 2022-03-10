@@ -9,3 +9,20 @@ NFText visualization prototype
 
 ## build app
 - `cargo build release`
+
+### wasm
+
+```
+cargo build --release --target wasm32-unknown-unknown
+wasm-bindgen --out-name wasm_example --out-dir target/ --target web target/wasm32-unknown-unknown/release/ekza-bevy-engine.wasm
+```
+then run server and access app via index.html
+
+## run on android:
+- `% cargo apk run`
+
+more info about building app [here](https://github.com/bevyengine/bevy/tree/latest/examples#games)
+
+### requirements
+android-sdk:
+`sudo apt update && sudo apt install android-sdk`
