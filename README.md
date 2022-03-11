@@ -18,6 +18,10 @@ wasm-bindgen --out-name wasm_example --out-dir target/ --target web target/wasm3
 ```
 then run server and access app via index.html
 
+build one file and other options:
+```
+https://github.com/bevyengine/bevy/discussions/4176
+```
 ## run on android:
 - `% cargo apk run`
 
