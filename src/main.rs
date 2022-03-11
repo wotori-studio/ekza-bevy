@@ -18,6 +18,11 @@ fn setup(mut commands: Commands, asset_server: Res<AssetServer>) {
         transform: Transform::from_xyz(0.7, 0.7, 1.0).looking_at(Vec3::new(0.0, 0.3, 0.0), Vec3::Y),
         ..Default::default()
     });
+    // ambient light
+    commands.insert_resource(AmbientLight {
+        color: Color::WHITE,
+        brightness: 1.0,
+    });
     const HALF_SIZE: f32 = 1.0;
     commands.spawn_bundle(DirectionalLightBundle {
         directional_light: DirectionalLight {
